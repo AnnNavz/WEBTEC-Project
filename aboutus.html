@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BONE-E Homepage</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <link rel="stylesheet" href="aboutus.css">
+    
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg custom-navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="indexImages/menu-logo.png" alt="Logo" class="logo-placeholder">
+            </a>
+            
+            <div class="collapse navbar-collapse justify-content-center">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link custom-link" href="index.html">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link custom-link" href="products.html">PRODUCT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link custom-link" href="contact.html">CONTACT US</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link custom-link" href="#">ABOUT US</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="d-flex align-items-center">
+                <form id="search-form" class="d-flex search-form me-3" role="search">
+  <div class="input-group">
+    <span class="input-group-text search-icon" id="search-addon">
+      <i class="bi bi-search"></i>
+    </span>
+    <input type="search"
+           id="search-input"
+           class="form-control search-input"
+           placeholder="Search"
+           aria-label="Search"
+           aria-describedby="search-addon">
+  </div>
+</form>
+
+                <br>
+                
+                <a href="cart.html" class="nav-icon position-relative">
+                    <i class="bi bi-cart"></i>
+                    <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="display:none;">0</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="about-hero-banner">
+    <div class="container-fluid h-100">
+        <div class="row align-items-end h-100">
+            <div class="col-12 text-end pb-3 pe-5">
+                <h1 class="display-3 fw-bold text-white">About Us</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<section class="philosophy-block py-5">
+    <div class="container-fluid">
+        <div class="row align-items-center px-4 px-md-5">
+            <div class="col-md-6 mb-4 mb-md-0">
+                <blockquote class="display-5 fw-bold text-white quote-text">
+                    "The journey of creating a skincare brand is the beautiful transformation of a deeply held philosophy into a daily ritual for others."
+                </blockquote>
+            </div>
+            
+            <div class="col-md-6 text-white story-text">
+                <p>The journey of "BONE-E" began not in a boardroom, but from a place of genuine, personal frustration. Our founder, like so many others, grew weary of the cycle of over-promised and under-delivering skincare products that cluttered the market. This deeply felt need for solutions that were both effective and trustworthy became the ultimate catalyst for change.</p>
+                
+                <p>"BONE-E" was thus created with a singular, unwavering mandate: to reject the status quo and deliver pure, lab-tested quality at every step. We committed ourselves to formulating products built on evidence, not fleeting trends, ensuring every ingredient serves a beneficial purpose for the health and vitality of your skin.</p>
+                
+                <p>That founding principle—a dedication to transparent, results-driven efficacy—has now blossomed into a successful and beloved collection. Today, the BONE-E line features -15+ signature products-, each a testament to our original promise. It is this persistent commitment to quality that allows us to consistently deliver visible results, earning not just high customer praise, but a true sense of trust and loyalty from our community.</p>
+                
+                <p class="mt-4 fw-bold">BONE-E: Skincare you can finally believe in.</p>
+            </div>
+        </div>
+    </div>
+</section>
+    
+<section class="team-section py-5 px-3">
+    <div class="container text-center">
+        
+        <h2 class="display-5 fw-bold mb-3">Let's meet our team</h2>
+        <p class="mb-5 team-intro-text">
+            Our success stems from a collaborative team of innovators and specialists who tirelessly research and
+            test every ingredient, ensuring BONE-E continues to lead with efficacy and transparency.
+        </p>
+
+        <div class="row team-grid justify-content-center mb-5">
+            
+            <div class="col-6 col-md-3 mb-4">
+                <div class="team-card" data-member-id="ann">
+                    <img src="aboutusImages/shirley.png" alt="Ann Shirley Navasca" class="img-fluid rounded-top team-photo">
+                    <div class="team-info mt-3 p-3">
+                        <h5 class="fw-bold mb-0">Navasca, Ann Shirley A.</h5>
+                        <p class="text-muted small">Chief Marketing Officer (CMO)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-3 mb-4">
+                <div class="team-card" data-member-id="marven">
+                    <img src="aboutusImages/marven.png" alt="Marven James Bas" class="img-fluid rounded-top team-photo">
+                    <div class="team-info mt-3 p-3">
+                        <h5 class="fw-bold mb-0">Bas, Marven James Y.</h5>
+                        <p class="text-muted small">Chief Operating Officer (COO)</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-6 col-md-3 mb-4">
+                <div class="team-card" data-member-id="jemar">
+                    <img src="aboutusImages/jemar.png" alt="Jemar Caliguid" class="img-fluid rounded-top team-photo">
+                    <div class="team-info mt-3 p-3">
+                        <h5 class="fw-bold mb-0">Caliguid, Jemar O.</h5>
+                        <p class="text-muted small">Chief Executive Officer (CEO)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-3 mb-4">
+                <div class="team-card" data-member-id="karmelie">
+                    <img src="aboutusImages/karms.png" alt="Karmelie Ann Canasa" class="img-fluid rounded-top team-photo">
+                    <div class="team-info mt-3 p-3">
+                        <h5 class="fw-bold mb-0">Canasa, Karmelie Ann S.</h5>
+                        <p class="text-muted small">Chief Financial Officer (CFO)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="profile-detail-block text-start">
+            <p class="mb-2" id="profile-title">Introducing Chief Marketing Officer,</p>
+            <h3 class="fw-bold mb-4 profile-name" id="profile-name">Navasca, Ann Shirley A.</h3>
+            
+            <p class="profile-description" id="profile-description">
+                an innovative skincare brand. Her connection to the company and its mission is deeply personal, as she was
+                initially drawn to BONE-E because she, too, has experienced the same skin challenges that the brand aims to
+                address. Though her career is now in the consumer goods sector, Ms. Navasca’s foundation is technical; she
+                is an alumna of the Asian College of Technology with a Bachelor of Science in Information Technology (BSIT).
+                Currently, the executive is 27 years old.
+            </p>
+            
+            <p class="mt-4 mb-0 contact-info" id="profile-contact">
+                Phone: 09627271449<br>
+                Email: css.annshirleynavasca@gmail.com
+            </p>
+        </div>
+
+    </div>
+</section>
+
+    
+<footer class="site-footer">
+    <div class="container-fluid footer-container">
+        <div class="row footer-content-row">
+
+            <div class="col-lg-3 col-md-12 footer-column footer-brand-info">
+                <h2 class="footer-brand-title">BONE-E</h2>
+                <p class="footer-brand-description">
+                    conscious skincare brand born from a founder's deep frustration with products that compromise skin health.
+                </p>
+            </div>
+
+            <div class="col-lg-3 col-md-6 footer-column footer-navigation">
+                <ul class="footer-links-group">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="products.html">PRODUCT</a></li>
+                    <li><a href="contact.html">CONTACT US</a></li>
+                    <li><a href="aboutus.html">ABOUT US</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-6 col-md-6 footer-column footer-newsletter-social">
+                
+                <h4 class="newsletter-heading">Never Miss a Clean Breakout: Get BONE-E News, Product Drops, and Ingredient Deep Dives</h4>
+                
+                <div class="newsletter-signup-box">
+                    <p class="mailing-list-text">Join the mailing list:</p>
+                    
+                    <form class="email-form" id="mailing-list-form">
+        <input type="email" placeholder="Email" required>
+        <button type="submit" class="submit-arrow-btn">
+            &rarr;
+        </button>
+    </form>
+    
+    <div id="email-status-message" class="form-status-message"></div>
+                    <div class="privacy-checkbox mt-2">
+                        <input type="checkbox" id="privacy-check" required>
+                        <label for="privacy-check">I've read the Privacy Policy to send me marketing e-mail</label>
+
+                        
+                    </div>
+                </div>
+
+                <div class="social-links-grid">
+                    <a href="#" class="social-link">INSTAGRAM</a>
+                    <a href="#" class="social-link">FACEBOOK</a>
+                    <a href="#" class="social-link">PINTEREST</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="aboutus.js"></script>
+    
+    <script src="products.js"></script>
+
+    <script>
+        
+    if (typeof updateCartCount === 'function') updateCartCount();
+        
+        let timeoutId;
+
+        document.getElementById('mailing-list-form').addEventListener('submit', function(event) {
+            
+            const privacyCheck = document.getElementById('privacy-check');
+            const statusMessage = document.getElementById('email-status-message');
+            const emailInput = this.querySelector('input[type="email"]');
+            
+            
+            event.preventDefault(); 
+            
+            // Clear any previous classes and timers
+            clearTimeout(timeoutId);
+            statusMessage.className = 'form-status-message';
+            statusMessage.textContent = ''; // Clear content before check
+
+            // 2. CONSTRAINT CHECK
+            if (!privacyCheck.checked) {
+                
+                // If the checkbox is NOT checked, display an error message
+                statusMessage.classList.add('status-error');
+                statusMessage.textContent = 'Please agree to the Privacy Policy to proceed.';
+                
+                // Hide the error after 3 seconds
+                timeoutId = setTimeout(() => {
+                    statusMessage.textContent = '';
+                    statusMessage.classList.remove('status-error');
+                }, 3000);
+
+                return; // Stop the function here
+            }
+            
+            // If constraint is met (checkbox is checked):
+            
+            // 3. Display the 'Sent' notification (Success)
+            statusMessage.classList.add('status-success');
+            statusMessage.textContent = 'Thank you! Email sent.';
+            
+            // 4. Clear the input field and uncheck the checkbox (good practice)
+            emailInput.value = '';
+            privacyCheck.checked = false; 
+
+            // 5. Hide the message after 3 seconds
+            timeoutId = setTimeout(() => {
+                statusMessage.textContent = '';
+                statusMessage.classList.remove('status-success');
+            }, 3000);
+        });
+
+    </script>
+    
+    <script>
+        const teamData = {
+            ann: {
+                title: "Chief Marketing Officer",
+                name: "Navasca, Ann Shirley A.",
+                description: `an innovative skincare brand. Her connection to the company and its mission is deeply personal, as she was
+                initially drawn to BONE-E because she, too, has experienced the same skin challenges that the brand aims to
+                address. Though her career is now in the consumer goods sector, Ms. Navasca’s foundation is technical; she
+                is an alumna of the Asian College of Technology with a Bachelor of Science in Information Technology (BSIT).
+                Currently, the executive is 27 years old.`,
+                contact: {
+                    phone: "09627271449",
+                    email: "css.annshirleynavasca@gmail.com"
+                }
+            },
+            marven: {
+                title: "Chief Operating Officer",
+                name: "Bas, Marven James Y.",
+                description: `An indispensable operational strategist for BONE-E, Marven James Y. Bas has been instrumental in scaling the brand's production and distribution capabilities from the ground up. He is deeply committed to efficiency and excellence, ensuring that BONE-E can meet growing market demands without compromising quality. Mr. Bas brings a strong educational background in engineering and systems management to his role; he is an alumnus of the Asian College of Technology with a Bachelor of Science in Information Technology (BSIT). Currently, the executive is 26 years old.`,
+                contact: {
+                    phone: "09202156578",
+                    email: "ccs.marvenjamesbas@gmail.com"
+                }
+            },
+            jemar: {
+                title: "Chief Executive Officer",
+                name: "Caliguid, Jemar O.",
+                description: `the visionary force guiding BONE-E. As the CEO, Jemar sets the strategic direction and tone for the entire company. His commitment to
+                transparency and efficacy stems from his technical background, having also graduated with a degree in BSIT from the Asian College of Technology.
+                Jemar is passionate about bridging the gap between advanced technology and clean, results-driven skincare. He is focused on
+                sustainable growth and fostering a brand culture built on integrity and trust. He is currently 25 years old.`,
+                contact: {
+                    phone: "09531818167",
+                    email: "ccs.jemarcaliguid@gmail.com"
+                }
+            },
+            karmelie: {
+                title: "Chief Financial Officer",
+                name: "Canasa, Karmelie Ann S.",
+                description: `the meticulous guardian of BONE-E's fiscal health. With an impressive understanding of financial modeling and resource management, 
+                Karmelie ensures the brand remains stable and poised for sustainable investment and expansion. She holds a degree in BSIT from the Asian College of Technology. 
+                Her role is pivotal in maintaining the delicate balance between sourcing high-quality, expensive ingredients and offering our products at an accessible price. 
+                She is 25 years old.`,
+                contact: {
+                    phone: "09772274485",
+                    email: "ccs.karmelieanncanasa@gmail.com"
+                }
+            }
+        };
+
+        const profileDetailBlock = document.querySelector('.profile-detail-block');
+    const teamCards = document.querySelectorAll('.team-card');
+    const profileTitle = document.getElementById('profile-title');
+    const profileName = document.getElementById('profile-name');
+    const profileDescription = document.getElementById('profile-description');
+    const profileContact = document.getElementById('profile-contact');
+    
+    // Function to update the profile detail block with a transition
+    function updateProfile(memberId) {
+        const member = teamData[memberId];
+        if (member) {
+            // 1. Start Fade Out
+            profileDetailBlock.classList.add('is-fading-out');
+
+            // Wait for the fade-out transition to complete (300ms defined in CSS)
+            setTimeout(() => {
+                // 2. Update Content (This happens while the block is invisible/faded out)
+                profileTitle.textContent = `Introducing ${member.title},`;
+                profileName.textContent = member.name;
+                profileDescription.textContent = member.description;
+                profileContact.innerHTML = `Phone: ${member.contact.phone}<br>Email: ${member.contact.email}`;
+
+                // 3. Start Fade In
+                // Remove the class to trigger the transition back to opacity: 1 and translateY(0)
+                profileDetailBlock.classList.remove('is-fading-out');
+            }, 300); // 300ms delay matches the CSS transition time
+        }
+    }
+    
+    // Add click listener to each team card
+    teamCards.forEach(card => {
+        card.addEventListener('click', function() {
+            const memberId = this.getAttribute('data-member-id');
+            // Prevent re-clicking the same person causing a re-transition while it's already running
+            if (!profileDetailBlock.classList.contains('is-fading-out')) {
+                updateProfile(memberId);
+            }
+        });
+    });
+        
+        // Initialize the block with the first member's data on page load
+        // This is not strictly necessary as it is already in the HTML, but good practice
+        // updateProfile('ann'); 
+    </script>
+
+</body>
+</html>

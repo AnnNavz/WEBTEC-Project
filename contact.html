@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | BONE-E</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="contact.css">
+</head>
+
+<body>
+    
+<nav class="navbar navbar-expand-lg custom-navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="indexImages/menu-logo.png" alt="Logo" class="logo-placeholder">
+            </a>
+            
+            <div class="collapse navbar-collapse justify-content-center">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link custom-link" href="index.html">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link custom-link" href="products.html">PRODUCT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link custom-link" href="contact.html">CONTACT US</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link custom-link" href="aboutus.html">ABOUT US</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="d-flex align-items-center">
+                <form id="search-form" class="d-flex search-form me-3" role="search">
+  <div class="input-group">
+    <span class="input-group-text search-icon" id="search-addon">
+      <i class="bi bi-search"></i>
+    </span>
+    <input type="search"
+           id="search-input"
+           class="form-control search-input"
+           placeholder="Search"
+           aria-label="Search"
+           aria-describedby="search-addon">
+  </div>
+</form>
+
+                <br>
+                
+                <a href="cart.html" class="nav-icon position-relative">
+                    <i class="bi bi-cart"></i>
+                    <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="display:none;">0</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+  <!-- CONTACT SECTION -->
+  <section class="contact-section">
+    <div class="container contact-container">
+      <div class="row align-items-center">
+        <!-- LEFT SIDE INFO -->
+        <div class="col-lg-6 contact-info">
+          <h2 class="contact-title">Contact Us</h2>
+          <p class="contact-description">
+            Need skin advice or help with an order? The BONE-E customer care team is here to provide you with expert, personalized support.
+            Reach out to us directly using the contact options below!
+          </p>
+
+          <div class="contact-details">
+            <div class="contact-item">
+              <i class="bi bi-geo-alt-fill"></i>
+              <div>
+                <h5>Address</h5>
+                <p>3/F ACT Cyber Tower Bldg, P. del Rosario St, Cebu City, Philippines</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <i class="bi bi-telephone-fill"></i>
+              <div>
+                <h5>Phone</h5>
+                <p>(032) 238-2380</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <i class="bi bi-envelope-fill"></i>
+              <div>
+                <h5>Email</h5>
+                <p>skinCare.BoneE@gmail.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT SIDE FORM -->
+        <div class="col-lg-6">
+          <div class="contact-form-box">
+            <h4>Send us a Message!</h4>
+            <form id="contact-form">
+              <input type="text" id="name" placeholder="Fullname" required>
+              <input type="email" id="email" placeholder="Email" required>
+              <textarea id="message" rows="4" placeholder="Message" required></textarea>
+              <button type="submit">Send</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    
+<footer class="site-footer">
+    <div class="container-fluid footer-container">
+        <div class="row footer-content-row">
+
+            <div class="col-lg-3 col-md-12 footer-column footer-brand-info">
+                <h2 class="footer-brand-title">BONE-E</h2>
+                <p class="footer-brand-description">
+                    conscious skincare brand born from a founder's deep frustration with products that compromise skin health.
+                </p>
+            </div>
+
+            <div class="col-lg-3 col-md-6 footer-column footer-navigation">
+                <ul class="footer-links-group">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="products.html">PRODUCT</a></li>
+                    <li><a href="contact.html">CONTACT US</a></li>
+                    <li><a href="aboutus.html">ABOUT US</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-6 col-md-6 footer-column footer-newsletter-social">
+                
+                <h4 class="newsletter-heading">Never Miss a Clean Breakout: Get BONE-E News, Product Drops, and Ingredient Deep Dives</h4>
+                
+                <div class="newsletter-signup-box">
+                    <p class="mailing-list-text">Join the mailing list:</p>
+                    
+                    <form class="email-form" id="mailing-list-form">
+        <input type="email" placeholder="Email" required>
+        <button type="submit" class="submit-arrow-btn">
+            &rarr;
+        </button>
+    </form>
+    
+    <div id="email-status-message" class="form-status-message"></div>
+                    <div class="privacy-checkbox mt-2">
+                        <input type="checkbox" id="privacy-check" required>
+                        <label for="privacy-check">I've read the Privacy Policy to send me marketing e-mail</label>
+
+                        
+                    </div>
+                </div>
+
+                <div class="social-links-grid">
+                    <a href="#" class="social-link">INSTAGRAM</a>
+                    <a href="#" class="social-link">FACEBOOK</a>
+                    <a href="#" class="social-link">PINTEREST</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="contact.js"></script>
+
+ <script src="products.js"></script>
+    
+    <script>
+        // Use a variable to store the timeout ID to prevent multiple timers running simultaneously
+        let timeoutId;
+
+        document.getElementById('mailing-list-form').addEventListener('submit', function(event) {
+            
+            const privacyCheck = document.getElementById('privacy-check');
+            const statusMessage = document.getElementById('email-status-message');
+            const emailInput = this.querySelector('input[type="email"]');
+            
+            // 1. PREVENT DEFAULT ACTION IMMEDIATELY (Stops the page from reloading/jumping)
+            event.preventDefault(); 
+            
+            // Clear any previous classes and timers
+            clearTimeout(timeoutId);
+            statusMessage.className = 'form-status-message';
+            statusMessage.textContent = ''; // Clear content before check
+
+            // 2. CONSTRAINT CHECK
+            if (!privacyCheck.checked) {
+                
+                // If the checkbox is NOT checked, display an error message
+                statusMessage.classList.add('status-error');
+                statusMessage.textContent = 'Please agree to the Privacy Policy to proceed.';
+                
+                // Hide the error after 3 seconds
+                timeoutId = setTimeout(() => {
+                    statusMessage.textContent = '';
+                    statusMessage.classList.remove('status-error');
+                }, 3000);
+
+                return; // Stop the function here
+            }
+            
+            // If constraint is met (checkbox is checked):
+            
+            // 3. Display the 'Sent' notification (Success)
+            statusMessage.classList.add('status-success');
+            statusMessage.textContent = 'Thank you! Email sent.';
+            
+            // 4. Clear the input field and uncheck the checkbox (good practice)
+            emailInput.value = '';
+            privacyCheck.checked = false; 
+
+            // 5. Hide the message after 3 seconds
+            timeoutId = setTimeout(() => {
+                statusMessage.textContent = '';
+                statusMessage.classList.remove('status-success');
+            }, 3000);
+        });
+    </script>
+
+    <script>
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+  event.preventDefault(); // Stop form from refreshing the page
+  
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const message = document.getElementById('message').value.trim();
+
+  if (!name || !email || !message) {
+    showPopup('Please fill out all fields.', 'error');
+    return;
+  }
+
+  // Simulate successful submission
+  showPopup('Thank you! Your message has been sent.', 'success');
+
+  // Clear fields
+  this.reset();
+});
+
+// Popup creator
+function showPopup(message, type) {
+  // Remove existing popup if any
+  const existingPopup = document.querySelector('.popup-message');
+  if (existingPopup) existingPopup.remove();
+
+  // Create popup element
+  const popup = document.createElement('div');
+  popup.className = `popup-message ${type}`;
+  popup.textContent = message;
+  document.body.appendChild(popup);
+
+  // Animate popup fade-in
+  setTimeout(() => popup.classList.add('show'), 100);
+
+  // Auto remove popup after 3 seconds
+  setTimeout(() => {
+    popup.classList.remove('show');
+    setTimeout(() => popup.remove(), 500);
+  }, 3000);
+}
+</script>
+
+</body>
+</html>

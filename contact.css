@@ -1,0 +1,459 @@
+*{
+    font-family: poppins;
+}
+
+
+/* Navigation bar */
+
+:root {
+    --dark-green: #363636;
+    --light-teal: #a4e6dd; /* A placeholder for the icon/link color */
+    --link-color: #55b6a7; /* Adjusted for better visibility */
+    --search-bg: #e6e6e6; 
+}
+
+/* 1. Top Dark Header */
+.top-header {
+    background-color: var(--dark-green);
+    padding: 5px 0;
+    font-size: 0.8rem;
+}
+.top-header .container-fluid {
+    padding-left: 1rem; /* Aligns with the HOMEPAGE text in the image */
+}
+
+/* 2. Main Navbar Container */
+.custom-navbar {
+    background-color: white; /* Ensures white background */
+    border-bottom: 1px solid #ccc; /* Subtle separator line */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
+}
+
+/* 3. Logo Placeholder Styling (to match image dimensions) */
+.logo-placeholder {
+    width: 50px; /* Adjust size to match your actual logo */
+    height: 50px;
+}
+
+/* 4. Navigation Links Styling */
+.custom-link {
+    color: var(--link-color) !important; /* Set link text color */
+    font-weight: 600;
+    margin: 0 15px; /* Spacing between links */
+}
+.custom-link:hover {
+    color: var(--dark-green) !important;
+}
+
+/* 5. Search Bar Styling */
+.search-form {
+    /* Set the background and border-radius for the pill shape */
+    border-radius: 50rem;
+    overflow: hidden; 
+    background-color: var(--search-bg);
+}
+
+.search-icon {
+    background-color: transparent !important;
+    border: none !important;
+    color: #6c757d; /* Icon color */
+    padding-left: 1rem;
+}
+
+.search-input {
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    /* Adjust height to match the image visually */
+    height: 40px; 
+    padding-right: 1rem;
+}
+
+/* 6. User and Cart Icons */
+.nav-icon {
+    font-size: 1.5rem;
+    color: var(--link-color); 
+    text-decoration: none;
+    transition: color 0.2s;
+}
+.nav-icon:hover {
+    color: var(--dark-green);
+}
+
+.contact-section {
+  background: linear-gradient(rgba(0, 61, 43, 0.308), rgba(18, 116, 92, 0)),
+              url('contactImages/csbackground.png') center/cover no-repeat;
+  color: #ffffff;
+  padding: 80px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* full page height */
+}
+
+.contact-container {
+  max-width: 1200px;
+  width: 90%;
+  background: rgba(255, 255, 255, 0.05); /* light transparent overlay only */
+  backdrop-filter: blur(3px);
+  border-radius: 20px;
+  padding: 60px 50px;
+  background-color: rgba(0, 58, 36, 0.384);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+.contact-info {
+  color: #fff;
+  padding-right: 40px;
+}
+
+.contact-info .contact-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: #aaeed1;
+}
+
+.contact-description {
+  line-height: 1.6;
+  margin-bottom: 40px;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.contact-item i {
+  font-size: 1.8rem;
+  background-color: #aaeed1;
+  color: #133831;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-item h5 {
+  font-weight: 600;
+  margin-bottom: 3px;
+  color: #ffffff;
+}
+
+.contact-item p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.95rem;
+}
+
+/* ===== CONTACT FORM BOX ===== */
+.contact-form-box {
+  background: #ffffff;
+  color: #333;
+  padding: 40px 35px;
+  border-radius: 20px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form-box h4 {
+  font-weight: 700;
+  margin-bottom: 25px;
+  text-align: center;
+  color: #206b5a;
+  font-size: 1.6rem;
+}
+
+.contact-form-box input,
+.contact-form-box textarea {
+  width: 100%;
+  background: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin-bottom: 18px;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.contact-form-box input:focus,
+.contact-form-box textarea:focus {
+  border-color: #53b39f;
+  outline: none;
+  box-shadow: 0 0 6px rgba(83, 179, 159, 0.4);
+}
+
+.contact-form-box button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background-color: #53b39f;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+.contact-form-box button:hover {
+  background-color: #3f9484;
+  transform: translateY(-2px);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px) {
+  .contact-container {
+    flex-direction: column;
+    padding: 40px 30px;
+  }
+
+  .contact-info {
+    padding-right: 0;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .contact-item {
+    justify-content: center;
+  }
+
+  .contact-item i {
+    margin-bottom: 10px;
+  }
+
+  .contact-form-box {
+    width: 100%;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-section {
+    text-align: center;
+  }
+
+  .contact-item {
+    justify-content: center;
+  }
+
+  .contact-form-box {
+    margin-top: 30px;
+  }
+}
+
+
+/* footer*/
+
+:root {
+    --footer-bg: #000000;
+    --footer-text-color: #ffffff;
+    --footer-link-color: #ffffff;
+    --link-hover-color: #90b885; /* Light green hover color from header/button */
+    --input-bg: #90b885; /* Soft green input background */
+    --grid-border: 1px solid rgb(255, 255, 255);
+}
+
+.site-footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-text-color);
+    padding: 60px 0;
+    font-size: 0.9rem;
+}
+
+.footer-container {
+    padding: 0 40px; /* Padding for the sides of the whole footer */
+}
+
+/* --- Grid Structure and Borders --- */
+.footer-content-row {
+    border-top: var(--grid-border); /* Top border for the entire content area */
+    border-left: var(--grid-border); /* Left border for the entire content area */
+}
+
+.footer-column {
+    padding: 30px;
+    /* Add borders to create the internal grid lines */
+    border-right: var(--grid-border);
+    border-bottom: var(--grid-border);
+}
+
+/* --- Column 1: Brand Info --- */
+.footer-brand-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--footer-text-color);
+    margin-bottom: 10px;
+}
+
+.footer-brand-description {
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.5;
+    max-width: 300px;
+}
+
+/* --- Column 2: Navigation Links --- */
+.footer-navigation {
+    /* Set the column to flex to manage link groups */
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-links-group {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.footer-links-group li {
+    margin-bottom: 5px;
+}
+
+.footer-links-group a {
+    color: var(--footer-link-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.footer-links-group a:hover {
+    color: var(--link-hover-color);
+}
+
+/* Legal Links Group: Separated by a horizontal border */
+.footer-legal-links {
+    margin-top: auto; /* Push this group to the bottom of the column */
+    padding-top: 20px;
+    border-top: var(--grid-border);
+}
+
+/* --- Column 3: Newsletter and Social --- */
+.newsletter-heading {
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 1.4;
+    color: var(--footer-text-color);
+    margin-bottom: 20px;
+}
+
+.mailing-list-text {
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+/* Email Input Styling */
+.email-form {
+    display: flex;
+    position: relative;
+    max-width: 350px;
+    height: 40px;
+    margin-bottom: 10px;
+    background-color: var(--input-bg);
+}
+
+.email-form input {
+    flex-grow: 1;
+    border: none;
+    padding: 0 15px;
+    background-color: transparent;
+    color: var(--footer-text-color);
+}
+
+.email-form input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.submit-arrow-btn {
+    width: 40px;
+    background-color: transparent;
+    border: none;
+    color: var(--footer-text-color);
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+/* Privacy Checkbox */
+.privacy-checkbox label {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-left: 5px;
+    margin-bottom: 50px;
+}
+
+/* Social Links Grid */
+.social-links-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    
+    /* Place the social links at the bottom of the right column */
+    margin-top: auto; 
+    border-top: var(--grid-border);
+    border-bottom: var(--grid-border);
+    border-right: var(--grid-border);
+    border-left: var(--grid-border); 
+}
+
+.social-link {
+    color: var(--footer-link-color);
+    text-decoration: none;
+    font-weight: 500;
+    text-align: center;
+    padding: 15px 0;
+    border-right: var(--grid-border);
+    transition: background-color 0.2s;
+}
+
+.social-link:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.popup-message {
+  position: fixed;
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-20px);
+  background-color: #53b39f;
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-weight: 600;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 2000;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+.popup-message.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+.popup-message.error {
+  background-color: #e74c3c;
+}
+
+.popup-message.success {
+  background-color: #53b39f;
+}
+
+
+#cart-count {
+    font-size: 0.7rem;       /* smaller text */
+    padding: 3px 5px;        /* tighter spacing */
+    transform: translate(-30%, -40%); /* fine-tune position */
+    min-width: 16px;         /* keep it circular even for single digits */
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}

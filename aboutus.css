@@ -1,0 +1,527 @@
+*{
+    font-family: poppins;
+}
+
+
+/* Navigation bar */
+
+:root {
+    --dark-green: #363636;
+    --light-teal: #a4e6dd; /* A placeholder for the icon/link color */
+    --link-color: #55b6a7; /* Adjusted for better visibility */
+    --search-bg: #e6e6e6; 
+}
+
+/* 1. Top Dark Header */
+.top-header {
+    background-color: var(--dark-green);
+    padding: 5px 0;
+    font-size: 0.8rem;
+}
+.top-header .container-fluid {
+    padding-left: 1rem; /* Aligns with the HOMEPAGE text in the image */
+}
+
+/* 2. Main Navbar Container */
+.custom-navbar {
+    background-color: white; /* Ensures white background */
+    border-bottom: 1px solid #ccc; /* Subtle separator line */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
+}
+
+/* 3. Logo Placeholder Styling (to match image dimensions) */
+.logo-placeholder {
+    width: 50px; /* Adjust size to match your actual logo */
+    height: 50px;
+}
+
+/* 4. Navigation Links Styling */
+.custom-link {
+    color: var(--link-color) !important; /* Set link text color */
+    font-weight: 600;
+    margin: 0 15px; /* Spacing between links */
+}
+.custom-link:hover {
+    color: var(--dark-green) !important;
+}
+
+/* 5. Search Bar Styling */
+.search-form {
+    /* Set the background and border-radius for the pill shape */
+    border-radius: 50rem;
+    overflow: hidden; 
+    background-color: var(--search-bg);
+}
+
+.search-icon {
+    background-color: transparent !important;
+    border: none !important;
+    color: #6c757d; /* Icon color */
+    padding-left: 1rem;
+}
+
+.search-input {
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    /* Adjust height to match the image visually */
+    height: 40px; 
+    padding-right: 1rem;
+}
+
+/* 6. User and Cart Icons */
+.nav-icon {
+    font-size: 1.5rem;
+    color: var(--link-color); 
+    text-decoration: none;
+    transition: color 0.2s;
+}
+.nav-icon:hover {
+    color: var(--dark-green);
+}
+
+/* footer*/
+
+:root {
+    --footer-bg: #000000;
+    --footer-text-color: #ffffff;
+    --footer-link-color: #ffffff;
+    --link-hover-color: #90b885; /* Light green hover color from header/button */
+    --input-bg: #90b885; /* Soft green input background */
+    --grid-border: 1px solid rgb(255, 255, 255);
+}
+
+.site-footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-text-color);
+    padding: 60px 0;
+    font-size: 0.9rem;
+}
+
+.footer-container {
+    padding: 0 40px; /* Padding for the sides of the whole footer */
+}
+
+/* --- Grid Structure and Borders --- */
+.footer-content-row {
+    border-top: var(--grid-border); /* Top border for the entire content area */
+    border-left: var(--grid-border); /* Left border for the entire content area */
+}
+
+.footer-column {
+    padding: 30px;
+    /* Add borders to create the internal grid lines */
+    border-right: var(--grid-border);
+    border-bottom: var(--grid-border);
+}
+
+/* --- Column 1: Brand Info --- */
+.footer-brand-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--footer-text-color);
+    margin-bottom: 10px;
+}
+
+.footer-brand-description {
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.5;
+    max-width: 300px;
+}
+
+/* --- Column 2: Navigation Links --- */
+.footer-navigation {
+    /* Set the column to flex to manage link groups */
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-links-group {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.footer-links-group li {
+    margin-bottom: 5px;
+}
+
+.footer-links-group a {
+    color: var(--footer-link-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.footer-links-group a:hover {
+    color: var(--link-hover-color);
+}
+
+/* Legal Links Group: Separated by a horizontal border */
+.footer-legal-links {
+    margin-top: auto; /* Push this group to the bottom of the column */
+    padding-top: 20px;
+    border-top: var(--grid-border);
+}
+
+/* --- Column 3: Newsletter and Social --- */
+.newsletter-heading {
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 1.4;
+    color: var(--footer-text-color);
+    margin-bottom: 20px;
+}
+
+.mailing-list-text {
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+/* Email Input Styling */
+.email-form {
+    display: flex;
+    position: relative;
+    max-width: 350px;
+    height: 40px;
+    margin-bottom: 10px;
+    background-color: var(--input-bg);
+}
+
+.email-form input {
+    flex-grow: 1;
+    border: none;
+    padding: 0 15px;
+    background-color: transparent;
+    color: var(--footer-text-color);
+}
+
+.email-form input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.submit-arrow-btn {
+    width: 40px;
+    background-color: transparent;
+    border: none;
+    color: var(--footer-text-color);
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+/* Privacy Checkbox */
+.privacy-checkbox label {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-left: 5px;
+    margin-bottom: 50px;
+}
+
+/* Social Links Grid */
+.social-links-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    
+    /* Place the social links at the bottom of the right column */
+    margin-top: auto; 
+    border-top: var(--grid-border);
+    border-bottom: var(--grid-border);
+    border-right: var(--grid-border);
+    border-left: var(--grid-border); 
+}
+
+.social-link {
+    color: var(--footer-link-color);
+    text-decoration: none;
+    font-weight: 500;
+    text-align: center;
+    padding: 15px 0;
+    border-right: var(--grid-border);
+    transition: background-color 0.2s;
+}
+
+.social-link:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+#cart-count {
+    font-size: 0.7rem;       /* smaller text */
+    padding: 3px 5px;        /* tighter spacing */
+    transform: translate(-30%, -40%); /* fine-tune position */
+    min-width: 16px;         /* keep it circular even for single digits */
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+@font-face {
+    font-family: 'lora';
+    src: url('fonts/lora-webfont.woff2') format('woff2'),
+         url('fonts/lora-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+.search-form .input-group {
+  transition: all 0.25s ease;
+  background: #e4e4e4;
+}
+
+.search-form .input-group:focus-within {
+  box-shadow: 0 0 0 3px rgba(64, 165, 151, 0.25); /* subtle teal glow */
+}
+
+.search-form .form-control::placeholder {
+  color: #838383;
+}
+
+.search-form .form-control:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+.search-form .input-group-text i {
+  font-size: 1rem;
+  color: #9b9b9b;
+  transition: color 0.2s ease;
+}
+
+.search-form .input-group:focus-within .input-group-text i {
+  color: #40a597; /* highlight brand color */
+}
+
+/* For small screens: make it full width */
+@media (max-width: 768px) {
+  .search-form {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+
+.about-hero-banner {
+    /* Set the height of the banner */
+    height: 450px; /* Adjust this value (e.g., 250px or 350px) as needed */
+    width: 100%;
+    
+    /* Set the background image (replace 'your-image-path.jpg' with the actual path) */
+    background-image: url('aboutusImages/banner.png');
+    background-size: cover;
+    background-position: center 30%; /* Adjust vertical position to show people better */
+    background-repeat: no-repeat;
+    
+    /* Ensure content inside banner is relative to it */
+    position: relative; 
+}
+
+/* Use a pseudo-element for the dark gradient/overlay */
+.about-hero-banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    /* Create a dark, slightly green-tinted gradient overlay 
+       Adjust colors/opacity as needed to match the image precisely */
+    background: linear-gradient(
+        to bottom, 
+        rgba(0, 0, 0, 0.2) 0%, /* Lightly dark at the top */
+        rgba(30, 60, 30, 0.5) 50%, /* Slightly green/dark in the middle */
+        rgba(0, 0, 0, 0.7) 100% /* Darker at the bottom for text contrast */
+    );
+    z-index: 1; /* Place overlay above the image */
+}
+
+/* Ensure the content (text) is above the overlay */
+.about-hero-banner .container-fluid {
+    position: relative;
+    z-index: 2; /* Place text above the overlay */
+}
+
+/* Styling for the H1 text */
+.about-hero-banner h1 {
+    font-weight: 700;
+    /* Adjust text alignment/padding on smaller screens if necessary */
+    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Optional: helps text stand out */
+}
+
+.philosophy-block {
+    /* The distinctive green background color (Adjust hex code to match perfectly) */
+    background-color: #66b586; 
+
+    /* *** INCREASED PADDING HERE (top, right, bottom, left) *** */
+    padding: 140px; 
+}
+
+/* Container for the quote, ensuring text size and font weight */
+.philosophy-block .quote-text {
+    /* Ensuring the pull quote is prominent */
+    font-size: 3rem; /* display-5 size */
+    line-height: 1.2;
+    font-family: lora;
+    padding: 40px;
+}
+
+/* Styling for the smaller story text on the right */
+.philosophy-block .story-text p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 1.25rem;
+}
+
+/* Add a bit of padding/margin between the columns on large screens if desired */
+@media (min-width: 992px) {
+    .philosophy-block .row .col-md-6:first-child {
+        /* Add some space on the right of the quote */
+        padding-right: 3rem; 
+    }
+    .philosophy-block .row .col-md-6:last-child {
+        /* Add some space on the left of the story text */
+        padding-left: 3rem;
+    }
+}
+
+/* --- TEAM SECTION CSS --- */
+
+.team-section {
+    background-color: #ffffff; /* White background for contrast with the previous section */
+}
+
+/* Style for the introductory text */
+.team-intro-text {
+    font-size: 1.1rem;
+    color: #495057;
+    margin-bottom: 3rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.team-card {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0; /* Light gray border */
+    border-radius: 8px; /* Slightly rounded corners for the whole card */
+    overflow: hidden; /* Ensures content stays within rounded borders */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+    transition: all 0.3s ease;
+    height: 100%; /* Ensure cards in a row have equal height */
+    display: flex;
+    flex-direction: column;
+}
+
+.team-card:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* More prominent shadow on hover */
+    transform: translateY(-3px); /* Slight lift effect */
+}
+
+/* Team Photos within the card */
+.team-photo {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Keep photos perfectly square */
+    object-fit: cover;
+    /* rounded-top class from Bootstrap will handle top corners */
+    display: block; /* Remove any extra space below image */
+}
+
+/* Team Info within the card */
+.team-info {
+    text-align: center;
+    padding: 1rem; /* Adjust padding as needed */
+    flex-grow: 1; /* Allows info section to fill remaining space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically if flex-grow is active */
+}
+
+.team-info h5 {
+    color: #343a40; /* Darker name */
+    font-size: 1.15rem;
+}
+
+.team-info p {
+    color: #6c757d; /* Muted job title */
+    font-size: 0.9rem;
+    margin-bottom: 0; /* Remove default paragraph margin */
+}
+
+/* Detailed Profile Block (The clean green box with white text) */
+.profile-detail-block {
+    /* Background color remains the same */
+    background-color: #83c798; 
+    height: 450px;
+    
+    /* Change primary text color to white */
+    color: #ffffff; 
+    
+    /* Subtle border-radius to match the image's rounded corners */
+    border-radius: 8px; 
+    
+    /* Padding for the content inside the box */
+    padding: 4rem; /* Increased padding for better internal margin/spacing */
+    
+    border: none; 
+    box-shadow: none; 
+    
+    /* === NEW CODE FOR TRANSITION === */
+    /* Transition applied to opacity and vertical movement */
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    opacity: 1; /* Default visible state */
+    transform: translateY(0);
+}
+
+/* New class to apply when content is changing */
+.profile-detail-block.is-fading-out {
+    opacity: 0;
+    transform: translateY(10px); /* Move down slightly as it fades out */
+}
+
+/* Ensure the Name still stands out */
+.profile-detail-block .profile-name {
+    color: #ffffff;
+    font-size: 2.25rem;
+    font-weight: 700; 
+    margin-bottom: 1.5rem !important; /* Increased space after the name */
+}
+
+/* For the introductory line: "Introducing Chief Marketing Officer," */
+.profile-detail-block p:first-child {
+    font-size: 1rem;
+    font-weight: 500; 
+    margin-bottom: 0.5rem; /* Small space before the name */
+}
+
+/* Style for the main description text */
+.profile-detail-block .profile-description {
+    line-height: 1.7;
+    font-size: 1.05rem;
+    margin-bottom: 2rem; /* Clear space before contact info */
+}
+
+/* Ensure contact info is also white and bold/semi-bold */
+.profile-detail-block .contact-info {
+    color: #ffffff;
+    font-weight: 600; 
+    line-height: 1.7; /* Good spacing for readability */
+}
+
+/* Ensuring all paragraphs inside are white */
+.profile-detail-block p {
+    color: #ffffff;
+}
+
+
+@font-face {
+    font-family: 'lora';
+    src: url('fonts/lora-webfont.woff2') format('woff2'),
+         url('fonts/lora-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}

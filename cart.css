@@ -1,0 +1,191 @@
+/* Using primary colors from products.css */
+:root {
+    --primary-teal: #40A597;
+    --text-dark: #2C3E50;
+    --checkout-blue: #007bff; /* Color used in the reference image's checkout button */
+    --hover-blue: #0056b3;
+}
+
+/* --- General Layout and Title --- */
+.cart-page-container {
+    max-width: 1200px;
+}
+
+.cart-title {
+    color: var(--text-dark);
+}
+
+.cart-header-info {
+    font-size: 0.95rem;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+/* --- Cart Item Card Styling --- */
+.cart-item-card {
+    border: 1px solid #ddd;
+    box-shadow: none; /* Override product card shadow */
+    margin-bottom: 15px;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.cart-item-img {
+    width: 120px; /* Larger image size like the reference */
+    height: 120px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-right: 20px;
+}
+
+.cart-item-info {
+    flex-grow: 1;
+}
+
+.cart-item-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.cart-item-meta {
+    font-size: 0.85rem;
+    color: #6c757d;
+}
+
+/* Quantity Controls */
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    overflow: hidden;
+    width: 100px; /* Fixed width for the control group */
+}
+
+.quantity-controls button {
+    border: none;
+    background-color: transparent;
+    color: var(--text-dark);
+    padding: 5px 8px;
+    line-height: 1;
+}
+
+.quantity-controls button:hover {
+    background-color: #f8f9fa;
+}
+
+.quantity-controls input {
+    border: none;
+    text-align: center;
+    padding: 5px 0;
+    width: 40px;
+    background-color: #fff;
+    font-size: 0.9rem;
+}
+
+/* Action Links */
+.cart-item-actions a {
+    color: #6c757d;
+    font-size: 0.9rem;
+    margin-right: 15px;
+    text-decoration: none;
+}
+.cart-item-actions a:hover {
+    color: var(--primary-teal);
+}
+
+/* --- Price and Total Column --- */
+.cart-price-col {
+    text-align: right;
+    width: 150px; /* Fixed width for alignment */
+}
+.cart-price-col .current-price {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+.cart-price-col .original-price {
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
+/* --- Summary Card --- */
+.cart-summary-card {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Sticky behavior */
+@media (min-width: 992px) {
+    .sticky-top {
+        top: 20px; 
+    }
+}
+
+/* Checkout Button */
+.btn-checkout {
+    background-color: var(--checkout-blue); /* Blue from reference image */
+    border-color: var(--checkout-blue);
+    color: white;
+}
+.btn-checkout:hover {
+    background-color: var(--hover-blue);
+    border-color: var(--hover-blue);
+}
+.btn-checkout:focus {
+    box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.5);
+}
+
+/* Coupon/Promotion Styling */
+.coupon-input {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.btn-apply-coupon {
+    background-color: #f8f9fa;
+    border: 1px solid #ced4da;
+    border-left: none;
+    color: var(--checkout-blue);
+    font-weight: 600;
+}
+.btn-apply-coupon:hover {
+    background-color: #e9ecef;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 767px) {
+    .cart-item-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .cart-item-img {
+        width: 100%;
+        height: auto;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    .cart-price-col {
+        text-align: left;
+        width: 100%;
+        margin-top: 10px;
+    }
+    .cart-item-actions {
+        order: 4; /* Push actions to the bottom on mobile */
+        width: 100%;
+        margin-top: 10px;
+    }
+    .quantity-controls {
+        margin-top: 10px;
+    }
+}
+
+#clear-cart-btn {
+  border-radius: 6px;
+  transition: all 0.2s ease-in-out; 
+}
+#clear-cart-btn:hover {
+  background-color: #dc3545;
+  color: white;
+}

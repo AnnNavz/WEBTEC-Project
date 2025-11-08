@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - BONE-E</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <link rel="stylesheet" href="products.css">
+    <link rel="stylesheet" href="cart.css"> 
+</head>
+<body>
+    
+<nav class="navbar navbar-expand-lg custom-navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="indexImages/menu-logo.png" alt="Logo" class="logo-placeholder">
+            </a>
+            
+            <div class="collapse navbar-collapse justify-content-center">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link custom-link" href="index.html">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link custom-link" href="products.html">PRODUCT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link custom-link" href="contact.html">CONTACT US</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link custom-link" href="#">ABOUT US</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="d-flex align-items-center">
+                <form id="search-form" class="d-flex search-form me-3" role="search">
+  <div class="input-group">
+    <span class="input-group-text search-icon" id="search-addon">
+      <i class="bi bi-search"></i>
+    </span>
+    <input type="search"
+           id="search-input"
+           class="form-control search-input"
+           placeholder="Search"
+           aria-label="Search"
+           aria-describedby="search-addon">
+  </div>
+</form>
+
+                <br>
+                
+                <a href="cart.html" class="nav-icon position-relative">
+                    <i class="bi bi-cart"></i>
+                    <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="display:none;">0</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+    
+    
+    <main class="container my-5 cart-page-container">
+    <p class="text-muted small mb-1">
+        <a href="index.html" class="text-decoration-none text-muted">Home</a> / Shopping Cart
+    </p>
+    <h2 class="fw-bold mb-4 cart-title"><i class="bi bi-bag me-2"></i> Shopping Cart</h2>
+    
+    <div class="row">
+        
+        <div class="col-lg-8">
+            <div class="d-flex justify-content-between align-items-center mb-3 cart-header-info">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="select-all">
+                    <label class="form-check-label text-muted" for="select-all">Select all</label>
+                </div>
+                <div>
+    <button id="clear-cart-btn" class="btn btn-outline-danger btn-sm">
+      <i class="bi bi-trash"></i> Remove All
+    </button>
+  </div>
+                <span class="fw-semibold text-primary">
+                    <span id="cart-item-count">0</span> Products in Cart
+                </span>
+                
+            </div>
+            
+            <div id="cart-items-container">
+                <div id="empty-cart-message" class="card p-5 text-center d-none">
+                    <p class="fs-4 mb-2">Your cart is currently empty!</p>
+                    <p class="text-muted">Explore our conscious skincare products to find something you'll love.</p>
+                    <a href="products.html" class="btn btn-primary-custom w-50 mx-auto mt-3">Start Shopping</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="card p-4 sticky-top cart-summary-card">
+                <h5 class="fw-bold mb-3">Subtotal</h5>
+                <div class="d-flex justify-content-end mb-2">
+                    <span id="cart-subtotal" class="fw-bold fs-3">$0.00</span>
+                </div>
+                <div class="text-end text-muted small mb-4">
+                    <span id="cart-original-total" class="text-decoration-line-through me-2">$0.00</span>
+                    <span id="cart-discount-message" class="text-danger"></span>
+                </div>
+
+                <button class="btn btn-checkout w-100 py-3 fw-bold mb-3">
+                    Checkout Now
+                </button>
+
+                <div class="mb-4">
+                    <p class="fw-bold mb-2">Promotions</p>
+                    <div class="input-group mb-2">
+                        <input type="text" class="form-control form-control-sm coupon-input" placeholder="Coupon code" aria-label="Coupon code">
+                        <button class="btn btn-apply-coupon btn-sm" type="button">Apply</button>
+                    </div>
+                    <p class="small text-success mb-1">
+                        <i class="bi bi-check-circle me-1"></i> Coupon applied: "A23FXK922" <a href="#" class="text-danger ms-2"><i class="bi bi-x"></i></a>
+                    </p>
+                    <p class="small text-muted mb-0">
+                        Buy now, pay later for order of <span class="fw-bold">$52.50</span> and over with **loterpay** 
+                    </p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-12">
+            <h3 class="mt-5 mb-4 fw-bold">You might also like</h3>
+            <div class="row g-4 mb-5" id="recommended-products">
+                
+                <div class="col-md-6 col-lg-3 product-item" data-category="moisturizers sensitive-skin">
+                    <div class="product-card card h-100 border-0 shadow-sm rounded-0 shadow-intense">
+                        <div class="product-image-box p-3">
+                            <img src="products/Sensitive/Sens_Moist.png" alt="Calming Barrier Cream" class="img-fluid product-img mx-auto d-block">
+                        </div>
+                        
+                        <div class="card-body pt-0 pb-2 px-3">
+                            <p class="product-name fw-semibold text-truncate mb-1">Calming Barrier Cream</p>
+                            <p class="product-desc text-muted small mb-2">A gentle, rich cream that supports the skin's barrier and reduces visible redness.</p>
+                            <p class="product-price fw-bold mb-0">$45</p>
+                        </div>
+                        
+                        <div class="card-footer bg-white border-0 pt-0 pb-3 px-3">
+                            <div class="product-actions d-flex justify-content-center gap-2">
+                                <button class="btn btn-sm btn-primary-custom flex-fill rounded-3" 
+                                    onclick="addToCartAndGoToCart({id: 'moisturizer-01', name: 'Calming Barrier Cream', price: 45, image: 'products/Sensitive/Sens_Moist.png'}, this)">
+                                    Buy Now
+                                </button>
+                                <button class="btn btn-sm btn-outline-secondary-custom flex-fill rounded-3" 
+                                    onclick="addToCartAndAlert({id: 'moisturizer-01', name: 'Calming Barrier Cream', price: 45, image: 'products/Sensitive/Sens_Moist.png'}, this)">
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3 product-item" data-category="exfoliators dry-skin">
+                    <div class="product-card card h-100 border-0 shadow-sm rounded-0 shadow-intense">
+                        <div class="product-image-box p-3">
+                            <img src="products/Dry/Dry_Exfo.png" alt="Gentle Cream Exfoliator" class="img-fluid product-img mx-auto d-block">
+                        </div>
+                        
+                        <div class="card-body pt-0 pb-2 px-3">
+                            <p class="product-name fw-semibold text-truncate mb-1">Gentle Cream Exfoliator</p>
+                            <p class="product-desc text-muted small mb-2">Micro-fine beads in a hydrating cream base softly buff away dead skin cells without drying.</p>
+                            <p class="product-price fw-bold mb-0">$40</p>
+                        </div>
+                        
+                        <div class="card-footer bg-white border-0 pt-0 pb-3 px-3">
+                            <div class="product-actions d-flex justify-content-center gap-2">
+                                <button class="btn btn-sm btn-primary-custom flex-fill rounded-3" 
+                                    onclick="addToCartAndGoToCart({id: 'exfoliator-01', name: 'Gentle Cream Exfoliator', price: 40, image: 'products/Dry/Dry_Exfo.png'}, this)">
+                                    Buy Now
+                                </button>
+                                <button class="btn btn-sm btn-outline-secondary-custom flex-fill rounded-3" 
+                                    onclick="addToCartAndAlert({id: 'exfoliator-01', name: 'Gentle Cream Exfoliator', price: 40, image: 'products/Dry/Dry_Exfo.png'}, this)">
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3 product-item" data-category="serums oily-skin">
+                    <div class="product-card card h-100 border-0 shadow-sm rounded-0 shadow-intense">
+                        <div class="product-image-box p-3">
+                            <img src="products/Oily/Oily_Serum.png" alt="Mattifying Pore Minimizer" class="img-fluid product-img mx-auto d-block">
+                        </div>
+                        
+                        <div class="card-body pt-0 pb-2 px-3">
+                            <p class="product-name fw-semibold text-truncate mb-1">Mattifying Pore Minimizer</p>
+                            <p class="product-desc text-muted small mb-2">A powerful serum that reduces pore visibility and keeps skin looking matte all day long.</p>
+                            <p class="product-price fw-bold mb-0">$38</p>
+                        </div>
+                        
+                        <div class="card-footer bg-white border-0 pt-0 pb-3 px-3">
+                            <div class="product-actions d-flex justify-content-center gap-2">
+                                <button class="btn btn-sm btn-primary-custom flex-fill rounded-3" 
+                                    onclick="addToCartAndGoToCart({id: 'serum-02', name: 'Mattifying Pore Minimizer', price: 38, image: 'products/Oily/Oily_Serum.png'}, this)">
+                                    Buy Now
+                                </button>
+                                <button class="btn btn-sm btn-outline-secondary-custom flex-fill rounded-3" 
+                                    onclick="addToCartAndAlert({id: 'serum-02', name: 'Mattifying Pore Minimizer', price: 38, image: 'products/Oily/Oily_Serum.png'}, this)">
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3 product-item" data-category="spot-treatments all-skin">
+                    <div class="product-card card h-100 border-0 shadow-sm rounded-0 shadow-intense">
+                        <div class="product-image-box p-3">
+                            <img src="products/DarkSpot.png" alt="Radiance Dark Spot Eraser" class="img-fluid product-img mx-auto d-block">
+                        </div>
+                        
+                        <div class="card-body pt-0 pb-2 px-3">
+                            <p class="product-name fw-semibold text-truncate mb-1">Radiance Dark Spot Eraser</p>
+                            <p class="product-desc text-muted small mb-2">A powerful concentrate to visibly reduce the look of dark spots and hyperpigmentation.</p>
+                            <p class="product-price fw-bold mb-0">$50</p>
+                        </div>
+                        
+                        <div class="card-footer bg-white border-0 pt-0 pb-3 px-3">
+                            <div class="product-actions d-flex justify-content-center gap-2">
+                                <button class="btn btn-sm btn-primary-custom flex-fill rounded-3" 
+                                    onclick="addToCartAndGoToCart({id: 'spot-02', name: 'Radiance Dark Spot Eraser', price: 50, image: 'products/DarkSpot.png'}, this)">
+                                    Buy Now
+                                </button>
+                                <button class="btn btn-sm btn-outline-secondary-custom flex-fill rounded-3" 
+                                    onclick="addToCartAndAlert({id: 'spot-02', name: 'Radiance Dark Spot Eraser', price: 50, image: 'products/DarkSpot.png'}, this)">
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+    
+    <footer class="site-footer">
+    <div class="container-fluid footer-container">
+        <div class="row footer-content-row">
+
+            <div class="col-lg-3 col-md-12 footer-column footer-brand-info">
+                <h2 class="footer-brand-title">BONE-E</h2>
+                <p class="footer-brand-description">
+                    conscious skincare brand born from a founder's deep frustration with products that compromise skin health.
+                </p>
+            </div>
+
+            <div class="col-lg-3 col-md-6 footer-column footer-navigation">
+                <ul class="footer-links-group">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="products.html">PRODUCT</a></li>
+                    <li><a href="contact.html">CONTACT US</a></li>
+                    <li><a href="aboutus.html">ABOUT US</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-6 col-md-6 footer-column footer-newsletter-social">
+                
+                <h4 class="newsletter-heading">Never Miss a Clean Breakout: Get BONE-E News, Product Drops, and Ingredient Deep Dives</h4>
+                
+                <div class="newsletter-signup-box">
+                    <p class="mailing-list-text">Join the mailing list:</p>
+                    
+                    <form class="email-form" id="mailing-list-form">
+        <input type="email" placeholder="Email" required>
+        <button type="submit" class="submit-arrow-btn">
+            &rarr;
+        </button>
+    </form>
+    
+    <div id="email-status-message" class="form-status-message"></div>
+                    <div class="privacy-checkbox mt-2">
+                        <input type="checkbox" id="privacy-check" required>
+                        <label for="privacy-check">I've read the Privacy Policy to send me marketing e-mail</label>
+
+                        
+                    </div>
+                </div>
+
+                <div class="social-links-grid">
+                    <a href="#" class="social-link">INSTAGRAM</a>
+                    <a href="#" class="social-link">FACEBOOK</a>
+                    <a href="#" class="social-link">PINTEREST</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <div aria-live="polite" aria-atomic="true" class="position-fixed top-0 end-0 p-3" style="z-index: 1050;">
+        <div id="checkoutToast" class="toast hide custom-toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="4000">
+            <div class="toast-header bg-success text-white">
+                <i class="bi bi-box-seam me-2"></i>
+                <strong class="me-auto">Order Placed!</strong>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                Thank you for your order! Your simulated checkout was successful.
+                <p class="small text-muted mb-0 mt-1">Order #BONE-E-001 has been confirmed.</p>
+            </div>
+        </div>
+    </div>
+    
+<!-- Confirm Delete Modal -->
+<div class="modal fade" id="confirmDeleteModal" tabindex="-1" aria-labelledby="confirmDeleteModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-0 shadow-lg">
+      <div class="modal-header bg-light">
+        <h5 class="modal-title fw-semibold" id="confirmDeleteModalLabel">Confirm Action</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <i class="bi bi-exclamation-triangle text-warning fs-1 mb-2"></i>
+        <p id="confirmMessage" class="fw-semibold text-secondary"></p>
+      </div>
+      <div class="modal-footer justify-content-center">
+        <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-danger btn-sm" id="confirmDeleteBtn">Confirm</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="products.js"></script> 
+    <script src="cart.js"></script>
+
+    <script>
+        // Use a variable to store the timeout ID to prevent multiple timers running simultaneously
+        let timeoutId;
+
+        document.getElementById('mailing-list-form').addEventListener('submit', function(event) {
+            
+            const privacyCheck = document.getElementById('privacy-check');
+            const statusMessage = document.getElementById('email-status-message');
+            const emailInput = this.querySelector('input[type="email"]');
+            
+            // 1. PREVENT DEFAULT ACTION IMMEDIATELY (Stops the page from reloading/jumping)
+            event.preventDefault(); 
+            
+            // Clear any previous classes and timers
+            clearTimeout(timeoutId);
+            statusMessage.className = 'form-status-message';
+            statusMessage.textContent = ''; // Clear content before check
+
+            // 2. CONSTRAINT CHECK
+            if (!privacyCheck.checked) {
+                
+                // If the checkbox is NOT checked, display an error message
+                statusMessage.classList.add('status-error');
+                statusMessage.textContent = 'Please agree to the Privacy Policy to proceed.';
+                
+                // Hide the error after 3 seconds
+                timeoutId = setTimeout(() => {
+                    statusMessage.textContent = '';
+                    statusMessage.classList.remove('status-error');
+                }, 3000);
+
+                return; // Stop the function here
+            }
+            
+            // If constraint is met (checkbox is checked):
+            
+            // 3. Display the 'Sent' notification (Success)
+            statusMessage.classList.add('status-success');
+            statusMessage.textContent = 'Thank you! Email sent.';
+            
+            // 4. Clear the input field and uncheck the checkbox (good practice)
+            emailInput.value = '';
+            privacyCheck.checked = false; 
+
+            // 5. Hide the message after 3 seconds
+            timeoutId = setTimeout(() => {
+                statusMessage.textContent = '';
+                statusMessage.classList.remove('status-success');
+            }, 3000);
+        });
+    </script>
+    
+</body>
+</html>
